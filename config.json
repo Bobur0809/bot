@@ -6,7 +6,7 @@
   "texts": {
     "start": "Salom, <b>{name}</b>! 👮\n\nTopshiriqni 2-qismiga xush kelibsan JIGAR! Endi topshiriq, maxfiy so'zni ayt va nasibangni ol",
     "help": "Kap katta odam yordam so'rashga uyalmaysangmi, qachon mustaqil bo'lasan? Mendan yordam kutma, yigitcha(qizaloq) 😤",
-    "correct": "<code>{flag}</code>"
+    "correct": "✅ Jigar tabriklayman! Haqiqiy hacker shunday qiladi! Flag: <code>{flag}</code>"
   },
   "wrong_replies": [
     {
