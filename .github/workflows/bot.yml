@@ -2,8 +2,9 @@ name: Telegram bot
 
 on:
   workflow_dispatch:          # qo'lda ishga tushirish (Actions -> Run workflow)
-  schedule:
-    - cron: "17 */6 * * *"    # zaxira: zanjir uzilsa, 6 soatda bir qayta ishga tushadi
+  # Musobaqa paytida zaxira jadvalni yoqing (zanjir uzilsa, 6 soatda bir qayta ishga tushadi):
+  # schedule:
+  #   - cron: "17 */6 * * *"
 
 # Bir vaqtda faqat bitta bot ishlaydi; yangisi navbatda kutadi
 concurrency:
