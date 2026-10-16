@@ -34,10 +34,16 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run bot.yml --ref "${{ github.ref_name }}"
 
-      - name: Botni ishga tushirish (~5 soat 45 daqiqa)
+      # Ikkala bot birga ishlaydi: topshiriq boti va flag tekshiruvchi bot
+      - name: Botlarni ishga tushirish (~5 soat 45 daqiqa)
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           FLAG: ${{ secrets.FLAG }}
           SECRET_WORDS: ${{ secrets.SECRET_WORDS }}
+          CHECKER_TOKEN: ${{ secrets.CHECKER_TOKEN }}
+          ADMIN_CHAT_ID: ${{ secrets.ADMIN_CHAT_ID }}
           RUN_SECONDS: "20700"
-        run: python bot.py config.json
+        run: |
+          python bot.py config.json &
+          python checker.py &
+          wait

@@ -18,3 +18,9 @@ python bot.py config.json
 ## To'xtatish
 GitHub → Actions → "Telegram bot" → "…" → **Disable workflow**,
 so'ng ishlab turgan run'ni **Cancel** qiling.
+
+## Flag tekshiruvchi bot (`checker.py`)
+O'quvchi flagni yuboradi → "✅ To'g'ri" / "❌ Noto'g'ri". To'g'ri topshirilsa,
+`ADMIN_CHAT_ID` ga xabar boradi (kim, qachon). `/stat` — yechganlar ro'yxati (faqat admin).
+GitHub Secrets: `CHECKER_TOKEN`, `ADMIN_CHAT_ID` (flag `FLAG` dan olinadi).
+Admin avval tekshiruvchi botga `/start` bosgan bo'lishi kerak.
