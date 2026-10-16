@@ -1,0 +1,43 @@
+name: Telegram bot
+
+on:
+  workflow_dispatch:          # qo'lda ishga tushirish (Actions -> Run workflow)
+  schedule:
+    - cron: "17 */6 * * *"    # zaxira: zanjir uzilsa, 6 soatda bir qayta ishga tushadi
+
+# Bir vaqtda faqat bitta bot ishlaydi; yangisi navbatda kutadi
+concurrency:
+  group: telegram-bot
+  cancel-in-progress: false
+
+permissions:
+  actions: write              # keyingi ishga tushirishni chaqirish uchun
+  contents: read
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # Keyingi ishni hozirdan navbatga qo'yamiz: bu tugashi bilan u boshlanadi
+      - name: Keyingi ishga tushirishni navbatga qo'yish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run bot.yml --ref "${{ github.ref_name }}"
+
+      - name: Botni ishga tushirish (~5 soat 45 daqiqa)
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          FLAG: ${{ secrets.FLAG }}
+          SECRET_WORDS: ${{ secrets.SECRET_WORDS }}
+          RUN_SECONDS: "20700"
+        run: python bot.py config.json

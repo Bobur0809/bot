@@ -1,0 +1,41 @@
+{
+  "secret_words": [],
+  "flag": "",
+  "flag_media": "media/flag.mp4",
+  "help_media": "media/help.mp4",
+  "texts": {
+    "start": "Salom, <b>{name}</b>! 👮\n\nTopshiriqni 2-qismiga xush kelibsan JIGAR! Endi topshiriq, maxfiy so'zni ayt va nasibangni ol",
+    "help": "Kap katta odam yordam so'rashga uyalmaysangmi, qachon mustaqil bo'lasan? Mendan yordam kutma, yigitcha(qizaloq) 😤",
+    "correct": "<code>{flag}</code>"
+  },
+  "wrong_replies": [
+    {
+      "gif": "media/1.mp4",
+      "text": "🧐 Hasan Husan zohiran bir bo'lsada botinda ikkidirlar... Bu senga katta maslahat! 😏"
+    },
+    {
+      "gif": "media/2.mp4",
+      "text": "Avliyolik sabrdir, sabr nafsga jabrdir. Bo'sh kelma jigarim"
+    },
+    {
+      "gif": "media/3.mp4",
+      "text": "😂 Haha topolmadingku jigar... Qaytadan urinib ko'r!"
+    },
+    {
+      "gif": "media/4.mp4",
+      "text": "💀 Agarda yil mag'lubi kim deb so'rashsa seni ko'rsatgan bo'lar edim. Yana urinib ko'r!"
+    },
+    {
+      "gif": "media/5.mp4",
+      "text": "😴 Qiynalmay qo'ya qol, baribir topolmaysan... yoki topa olasanmi? 🤔"
+    },
+    {
+      "gif": "media/6.mp4",
+      "text": "🤦 Undan ko'ra boshqa topshiriqni ishla jigar, bu sening aqliy chegarangdan tashqarida..."
+    },
+    {
+      "gif": "media/7.mp4",
+      "text": "😤 Yana bir bor urinib ko'r, balki omading chopadi... balki yo'q 🙂"
+    }
+  ]
+}
