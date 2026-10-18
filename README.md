@@ -20,7 +20,10 @@ GitHub → Actions → "Telegram bot" → "…" → **Disable workflow**,
 so'ng ishlab turgan run'ni **Cancel** qiling.
 
 ## Flag tekshiruvchi bot (`checker.py`)
-O'quvchi flagni yuboradi → "✅ To'g'ri" / "❌ Noto'g'ri". To'g'ri topshirilsa,
-`ADMIN_CHAT_ID` ga xabar boradi (kim, qachon). `/stat` — yechganlar ro'yxati (faqat admin).
-GitHub Secrets: `CHECKER_TOKEN`, `ADMIN_CHAT_ID` (flag `FLAG` dan olinadi).
+O'quvchi flagni yuboradi → "✅ To'g'ri" / "❌ Noto'g'ri". Dinamik ball: 1-o'rin 500,
+har keyingi o'rin 50 kam, eng kami 100. Birinchi yechgan — 🩸 First Blood.
+`/reyting` — hammaga ochiq reyting, `/stat` — ID'lar bilan (faqat admin).
+Reyting admin chatidagi pin qilingan xabarda saqlanadi (o'chirmang, unpin qilmang).
+GitHub Secrets: `CHECKER_TOKEN`, `ADMIN_CHAT_ID`, ixtiyoriy `ANNOUNCE_CHAT_ID`
+(First Blood e'loni shu kanalga; bot u yerda admin bo'lishi kerak). Flag `FLAG` dan olinadi.
 Admin avval tekshiruvchi botga `/start` bosgan bo'lishi kerak.

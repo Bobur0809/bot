@@ -42,6 +42,7 @@ jobs:
           SECRET_WORDS: ${{ secrets.SECRET_WORDS }}
           CHECKER_TOKEN: ${{ secrets.CHECKER_TOKEN }}
           ADMIN_CHAT_ID: ${{ secrets.ADMIN_CHAT_ID }}
+          ANNOUNCE_CHAT_ID: ${{ secrets.ANNOUNCE_CHAT_ID }}
           RUN_SECONDS: "20700"
         run: |
           python bot.py config.json &
